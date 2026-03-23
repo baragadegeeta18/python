@@ -1,0 +1,45 @@
+
+1. Greatest of 3 numbers
+Python
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+if a >= b and a >= c:
+    print("Greatest number is:", a)
+elif b >= a and b >= c:
+    print("Greatest number is:", b)
+else:
+    print("Greatest number is:", c)
+
+2. Check number is odd or even
+Python
+
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+
+3. Check character is uppercase or lowercase
+Python
+
+ch = input("Enter a character: ")
+
+if ch.isupper():
+    print("Uppercase letter")
+elif ch.islower():
+    print("Lowercase letter")
+else:
+    print("Not an alphabet")
+
+4. Check input is number or character
+Python
+
+x = input("Enter something: ")
+
+if x.isdigit():
+    print("It is a number")
+else:
+    print("It is a character")
