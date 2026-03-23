@@ -1,0 +1,60 @@
+
+Q1. WAP to add two numbers in Python
+Python
+
+# Program to add two numbers
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+sum = a + b
+
+print("Sum =", sum)
+
+Q2. WAP to declare variables and display their types
+Python
+
+# Program to show variable types
+
+a = 10
+b = 3.14
+c = "Hello"
+d = True
+
+print("Type of a:", type(a))
+print("Type of b:", type(b))
+print("Type of c:", type(c))
+print("Type of d:", type(d))
+
+Q3. WAP to demonstrate type casting in Python
+Python
+
+# Program for type casting
+
+a = 10       # int
+b = 2.5      # float
+
+# Convert int to float
+x = float(a)
+
+# Convert float to int
+y = int(b)
+
+# Convert number to string
+z = str(a)
+
+print("Float value:", x)
+print("Integer value:", y)
+print("String value:", z)
+
+Q4. WAP to demonstrate Logical Operators
+Python
+
+# Program for logical operators
+
+a = True
+b = False
+
+print("AND operation:", a and b)
+print("OR operation:", a or b)
+print("NOT operation:", not a)
