@@ -1,0 +1,15 @@
+1. *Length of a string*
+s = input("Enter a string: ")
+print(len(s))
+2. *String from first two and last two characters*
+s = input("Enter a string: ")
+if len(s) >= 2:
+    result = s[:2] + s[-2:]
+else:
+    result = ""
+print(result)
+3. *Concatenate two strings*
+a = input("First string: ")
+b = input("Second string: ")
+print(a + b)
+Each program reads input and prints the required result.
