@@ -1,0 +1,30 @@
+Python
+for i in range(1, 11):
+    if i % 2 == 0:
+        print(i)
+2) Add (sum) odd numbers from 1 to 10
+Python
+sum = 0
+for i in range(1, 11):
+    if i % 2 != 0:
+        sum += i
+
+print("Sum of odd numbers:", sum)
+3) Fibonacci series between 0 to 50
+Python
+a = 0
+b = 1
+
+while a <= 50:
+    print(a, end=" ")
+    c = a + b
+    a = b
+    b = c
+4) Remove characters with odd index values from a string
+Python
+string = input("Enter a string: ")
+result = ""
+
+for i in range(len(string)):
+    if i % 2 == 0:
+        result += string[i]
