@@ -1,0 +1,25 @@
+1. Calculate length of string
+Python
+string = input("Enter a string: ")
+length = 0
+
+for i in string:
+    length += 1
+
+print("Length of string:", length)
+2. Make string from first 2 and last 2 characters
+Python
+string = input("Enter a string: ")
+
+if len(string) < 2:
+    print("Empty string")
+else:
+    result = string[:2] + string[-2:]
+    print("Result:", result)
+3. Concatenate two strings
+Python
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+
+result = str1 + str2
+print("Concatenated string:", result)
