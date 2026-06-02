@@ -1,0 +1,49 @@
+import simpy
+import random
+
+# Parameters
+INTERARRIVAL_TIME = 3
+SERVICE_TIME = 5
+SIM_TIME = 30
+
+waiting_times = []
+
+# Customer process
+def customer(env, name, server):
+    arrival_time = env.now
+    print(f"{name} arrives at {arrival_time:.2f}")
+
+    with server.request() as request:
+        yield request
+
+        wait = env.now - arrival_time
+        waiting_times.append(wait)
+
+        print(f"{name} starts service at {env.now:.2f}")
+        yield env.timeout(SERVICE_TIME)
+
+        print(f"{name} leaves at {env.now:.2f}")
+
+# Customer generator
+def customer_generator(env, server):
+    i = 1
+    while True:
+        yield env.timeout(random.randint(1, INTERARRIVAL_TIME))
+        env.process(customer(env, f"Customer {i}", server))
+        i += 1
+
+# Simulation environment
+env = simpy.Environment()
+
+# Single server
+server = simpy.Resource(env, capacity=1)
+
+env.process(customer_generator(env, server))
+
+env.run(until=SIM_TIME)# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
