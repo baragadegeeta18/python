@@ -1,0 +1,79 @@
+#1 Dictionary
+d = {'a': 3, 'b': 1, 'c': 2}
+
+# Ascending order
+asc = dict(sorted(d.items(), key=lambda item: item[1]))
+print("Ascending:", asc)
+
+#2 Descending order
+desc = dict(sorted(d.items(), key=lambda item: item[1], reverse=True))
+print("Descending:", desc)
+d = {'name': 'John', 'age': 25}
+
+key = 'age'
+
+if key in d:
+    print("Key exists")
+else:
+    print("Key does not exist")
+#3 
+d1 = {'a': 1, 'b': 2}
+d2 = {'c': 3, 'd': 4}
+
+merged = {**d1, **d2}
+
+print("Merged Dictionary:", merged)
+t = (1, 2, 3)
+
+#4 Add item
+t = t + (4,)
+
+print("Updated Tuple:", t)
+#5 create a tupple
+t = (10, "Python", 3.14, True)
+
+print("Tuple:", t)
+#6sum all items in a list
+numbers = [10, 20, 30, 40]
+
+total = sum(numbers)
+
+print("Sum:", total)
+
+#7 get the largest number from the list 
+numbers = [12, 45, 7, 89, 23]
+
+largest = max(numbers)
+
+print("Largest Number:", largest)
+
+#8 add members in a list
+s = {1, 2, 3}
+
+# Add single item
+s.add(4)
+
+# Add multiple items
+s.update([5, 6])
+
+print("Updated Set:", s)
+
+# 9 reverse the order of ites in an array 
+from array import *
+
+arr = array('i', [1, 2, 3, 4, 5])
+
+arr.reverse()
+
+print("Reversed Array:", arr)
+
+#10 create an array of 5 integers and display ites using indexes  
+from array import *
+
+arr = array('i', [10, 20, 30, 40, 50])
+
+# Display array items
+print("Array Elements:")
+
+for i in range(len(arr)):
+    print("Index", i, "=", arr[i])
